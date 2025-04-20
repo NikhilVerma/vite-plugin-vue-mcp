@@ -31,7 +31,11 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
+  "bin": {
+    "vue-mcp": "cli.js"
+  },
   "files": [
+    "cli.js",
     "dist",
     "src/overlay.js"
   ],

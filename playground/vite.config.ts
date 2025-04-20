@@ -11,6 +11,7 @@ export default defineConfig({
     vue(),
     VueMcp({
       appendTo: 'src/main.ts',
+      updateCursorMcpJson: false,
     }),
     DevTools(),
   ],
