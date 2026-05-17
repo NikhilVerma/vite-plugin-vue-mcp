@@ -1,4 +1,13 @@
-# vite-plugin-vue-mcp
+# @nonfx/vite-plugin-vue-mcp
+
+> **This is a patched fork of [vite-plugin-vue-mcp](https://github.com/webfansplz/vite-plugin-vue-mcp) by [@webfansplz](https://github.com/webfansplz).**
+>
+> It includes two bug fixes that are [pending upstream (PR #36)](https://github.com/webfansplz/vite-plugin-vue-mcp/pull/36):
+>
+> 1. **SSE reconnection crash** — when an MCP client disconnects and reconnects, the server threw `"Already connected to a transport"` and stopped working until the dev server was restarted.
+> 2. **Nuxt support** — `transformIndexHtml` is not called in Nuxt, so the client overlay script was never injected and all MCP tool calls hung indefinitely. This fork auto-detects Nuxt and injects via the `transform` hook instead.
+>
+> Once these fixes land in the upstream package, prefer using `vite-plugin-vue-mcp` directly.
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -10,7 +19,7 @@ Vite plugin that enables a MCP server for your Vue app to provide information ab
 ## Installation 📦
 
 ```bash
-pnpm install vite-plugin-vue-mcp -D
+pnpm install @nonfx/vite-plugin-vue-mcp -D
 ```
 
 ## Usage 🔨
@@ -152,11 +161,11 @@ This project is inspired by [vite-plugin-mcp](https://github.com/antfu/nuxt-mcp/
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/vite-plugin-vue-mcp?style=flat&colorA=080f12&colorB=1fa669
-[npm-version-href]: https://npmjs.com/package/vite-plugin-vue-mcp
-[npm-downloads-src]: https://img.shields.io/npm/dm/vite-plugin-vue-mcp?style=flat&colorA=080f12&colorB=1fa669
-[npm-downloads-href]: https://npmjs.com/package/vite-plugin-vue-mcp
-[bundle-src]: https://img.shields.io/bundlephobia/minzip/vite-plugin-vue-mcp?style=flat&colorA=080f12&colorB=1fa669&label=minzip
-[bundle-href]: https://bundlephobia.com/result?p=vite-plugin-vue-mcp
-[license-src]: https://img.shields.io/github/license/webfansplz/vite-plugin-vue-mcp.svg?style=flat&colorA=080f12&colorB=1fa669
-[license-href]: https://github.com/webfansplz/vite-plugin-vue-mcp/blob/main/LICENSE
+[npm-version-src]: https://img.shields.io/npm/v/@nonfx/vite-plugin-vue-mcp?style=flat&colorA=080f12&colorB=1fa669
+[npm-version-href]: https://npmjs.com/package/@nonfx/vite-plugin-vue-mcp
+[npm-downloads-src]: https://img.shields.io/npm/dm/@nonfx/vite-plugin-vue-mcp?style=flat&colorA=080f12&colorB=1fa669
+[npm-downloads-href]: https://npmjs.com/package/@nonfx/vite-plugin-vue-mcp
+[bundle-src]: https://img.shields.io/bundlephobia/minzip/@nonfx/vite-plugin-vue-mcp?style=flat&colorA=080f12&colorB=1fa669&label=minzip
+[bundle-href]: https://bundlephobia.com/result?p=@nonfx/vite-plugin-vue-mcp
+[license-src]: https://img.shields.io/github/license/NikhilVerma/vite-plugin-vue-mcp.svg?style=flat&colorA=080f12&colorB=1fa669
+[license-href]: https://github.com/NikhilVerma/vite-plugin-vue-mcp/blob/main/LICENSE

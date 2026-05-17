@@ -1,5 +1,5 @@
 {
-  "name": "vite-plugin-vue-mcp",
+  "name": "@nonfx/vite-plugin-vue-mcp",
   "type": "module",
   "version": "0.3.2",
   "packageManager": "pnpm@10.6.2",
@@ -7,12 +7,12 @@
   "author": "Arlo <webfansplz@gmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/webfansplz",
-  "homepage": "https://github.com/webfansplz/vite-plugin-vue-mcp#readme",
+  "homepage": "https://github.com/NikhilVerma/vite-plugin-vue-mcp#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webfansplz/vite-plugin-vue-mcp.git"
+    "url": "git+https://github.com/NikhilVerma/vite-plugin-vue-mcp.git"
   },
-  "bugs": "https://github.com/webfansplz/vite-plugin-vue-mcp/issues",
+  "bugs": "https://github.com/NikhilVerma/vite-plugin-vue-mcp/issues",
   "keywords": [
     "vite-plugin",
     "vue",
